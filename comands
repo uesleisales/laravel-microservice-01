@@ -1,0 +1,3 @@
+php artisan make:request StoreUpdateCategory
+php artisan make:migration -m
+php artisan make:Observer CategoryObserver --model=Category

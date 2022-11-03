@@ -1,3 +1,7 @@
+php artisan make:resource CompanyResource
 php artisan make:request StoreUpdateCategory
 php artisan make:migration -m
 php artisan make:Observer CategoryObserver --model=Category
+php artisan make:test Api\\CategoryTest
+php artisan test
+php artisan make:factory CategoryFactory --model=Category

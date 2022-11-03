@@ -24,8 +24,8 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   $categories = $this->repository->get();
-        return CategoryResource::collection($categories);
+    {   $companies = $this->repository->get();
+        return CategoryResource::collection($companies);
     }
 
     /**
@@ -48,7 +48,7 @@ class CategoryController extends Controller
      */
     public function show($url)
     {
-        $category = $this->categoryRepository->where('url', $url)->firstOrFail();
+        $category = $this->repository->where('url', $url)->firstOrFail();
         return new CategoryResource($category);
     }
 

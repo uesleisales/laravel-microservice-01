@@ -45,7 +45,7 @@ class CompanyTest extends TestCase
      * @return void
      */
     public function test_update_company()
-    {   
+    {
         $company = Company::factory()->create();
         $data = [
             'category_id' => \App\Models\Category::factory()->create()->id,
@@ -63,7 +63,6 @@ class CompanyTest extends TestCase
         $response = $this->putJson("{$this->endpoint}/{$company->uuid}", $data);
         $response->assertStatus(200);
     }
-
 
     /**
      * Delete company
